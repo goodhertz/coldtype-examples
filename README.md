@@ -60,7 +60,7 @@ You can type any number of frame indices here, to preview multiple frames at onc
 pf 35, 36, 37
 ```
 
-If you hit `ra`, this will **r**ender **a**ll, and should take a little while to complete, depending on how fast you’re computer is.
+If you hit `ra`, this will **r**ender **a**ll, and should take a little while to complete, depending on how fast your computer is.
 
 ```
 ra
