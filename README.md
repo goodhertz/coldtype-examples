@@ -25,7 +25,7 @@ coldtype --help
 
 That should spit out a bunch of stuff.
 
-Now you can open up the Coldtype app. This will need to be open (& remain open) whenever you’re working on a coldtype python file.
+Now you can open up the Coldtype viewer app. This will need to be open (& remain open) whenever you’re working on a coldtype python file, and before you run a `coldtype ...` command.
 
 Once the app is open, head back to a terminal & try this:
 
