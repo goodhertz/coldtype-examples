@@ -8,11 +8,12 @@
 ## Setting up coldtype-examples
 
 ```
+git clone https://github.com/goodhertz/coldtype.git
 git clone https://github.com/goodhertz/coldtype-examples.git
 cd coldtype-examples
 python3.8 -m venv venv --prompt=coldtype-examples
 source venv/bin/activate
-pip install coldtype[renderer]
+pip install -e ../coldtype
 pip install git+https://github.com/typemytype/drawbot # optional, for mac rendering
 ```
 
@@ -29,7 +30,7 @@ Now you can open up the Coldtype app. This will need to be open (& remain open) 
 Once the app is open, head back to a terminal & try this:
 
 ```
-coldtype animation/banner.py
+coldtype animations/banner.py
 ```
 
 That should display the text "COLDTYPE" in the Coldtype app. Now you’re ready to code some typography.
@@ -39,7 +40,7 @@ That should display the text "COLDTYPE" in the Coldtype app. Now you’re ready 
 When working on an animation, it’s usually best to pass the `-w` flag when you run the `coldtype` command-line tool.
 
 ```
-coldtype animation/808.py -w
+coldtype animations/808.py -w
 ```
 
 When you run that command, the process will "hang," meaning you’ll have to hit `ctrl+c` in order to kill the process.
