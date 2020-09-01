@@ -5,13 +5,13 @@ curves = Font(sibling(__file__, "media/digestivecurves.ufo"))
 df = "≈/DigestiveVariable.ttf"
 
 def ds(e1, e2):
-    # 128
-    return StyledString("Digestive", Style("~/Type/fonts/fonts/DigestiveVariable.ttf", 160-50*e2, fill=1, tu=0+28*e1, wdth=e1, ro=1, bs=-20*(1-e2))).pens()
+    # 128, -50 on size
+    return StyledString("Digestive", Style("~/Type/fonts/fonts/DigestiveVariable.ttf", 186-0*e2, fill=1, tu=0+0*e1, wdth=e1, ro=1, bs=0*(1-e2))).pens()
 
 def render_snake(f, fi):
     a:Animation = f.a
-    at1 = a.progress(fi, loops=5, easefn="ceio")
-    at2 = a.progress(fi, loops=5, easefn="ceio")
+    at1 = a.progress(fi, loops=10, easefn="ceio")
+    at2 = a.progress(fi, loops=10, easefn="ceio")
 
     track = DATPen()
     curves["path1"].draw(track)
@@ -34,7 +34,7 @@ def render_snake(f, fi):
 
     return t, dps
 
-t = Timeline(350, storyboard=[0, 50, 349])
+t = Timeline(350, storyboard=[0, 20, 349])
 
 @animation(rect=(1920,500), timeline=t)
 def render(f):
@@ -43,12 +43,14 @@ def render(f):
         _, zero = render_snake(f, 0)
     track, now = render_snake(f, f.i)
     bg = hsl(0, l=0.97)
-    return [
+    return DATPenSet([
         DATPen().rect(f.a.r).f(bg),
-        zero.f(hsl(0.1, l=0.8)) if test else DATPen(),
-        now.f(hsl(0.9, l=0.6, s=0.7)).understroke(s=bg, sw=5),
-        #track.f(None).s(hsl(0.65, l=0.9)).sw(15).translate(0, -50),
-        #track.copy().translate(0, 180),
-    ]
+        DATPenSet([
+            zero.f(hsl(0.1, l=0.8)) if test else DATPen(),
+            track.f(None).s(hsl(0.65, l=0.9)).sw(15).translate(0, -8),
+            now.f(hsl(0.9, l=0.6, s=0.7))#.understroke(s=bg, sw=5),
+            #track.copy().translate(0, 180),
+        ]).translate(0, -30)
+    ])
 
 #animation = Animation(render, (1080, 600), timeline=t, watches=[sibling(__file__, "digestivecurves.ufo")], bg=0)
