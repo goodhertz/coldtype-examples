@@ -1,7 +1,7 @@
 from coldtype import *
 
 # This font does not come w/ Coldtype — but it’s an incredibly cool font worth buying
-fatface = Font("≈/OhnoFatfaceVariable.ttf")
+fatface = Font("~/Type/fonts/fonts/OhnoFatfaceVariable.ttf")
 
 @animation(timeline=Timeline(100, storyboard=[0]), bg=0.2)
 def render(f):
