@@ -14,7 +14,6 @@ cd coldtype-examples
 python3.8 -m venv venv --prompt=coldtype-examples
 source venv/bin/activate
 pip install -e ../coldtype
-pip install git+https://github.com/typemytype/drawbot # optional, for mac rendering
 ```
 
 ## Verifying installation
@@ -25,25 +24,19 @@ coldtype --help
 
 That should spit out a bunch of stuff.
 
-Now you can open up the Coldtype viewer app. This will need to be open (& remain open) whenever you’re working on a coldtype python file, and before you run a `coldtype ...` command.
-
-Once the app is open, head back to a terminal & try this:
-
 ```
 coldtype animations/banner.py
 ```
 
-That should display the text "COLDTYPE" in the Coldtype app. Now you’re ready to code some typography.
+That should pop up a window and display the text "COLDTYPE". Now you’re ready to code some typography.
 
 ## Animating
 
-When working on an animation, it’s usually best to pass the `-w` flag when you run the `coldtype` command-line tool.
-
 ```
-coldtype animations/808.py -w
+coldtype animations/808.py
 ```
 
-When you run that command, the process will "hang," meaning you’ll have to hit `ctrl+c` in order to kill the process.
+When you run that command, the process will "hang," meaning you’ll have to hit `ctrl+c` in order to kill the process, or hit `cmd+Q` with the viewing window in the foreground.
 
 While it’s hanging, you can type in little mnemonics to trigger different actions in the coldtype renderer.
 
@@ -58,7 +51,7 @@ pf 30
 You can type any number of frame indices here, to preview multiple frames at once, like so:
 
 ```
-pf 35, 36, 37
+pf 35 36 37
 ```
 
 If you hit `ra`, this will **r**ender **a**ll, and should take a little while to complete, depending on how fast your computer is.
