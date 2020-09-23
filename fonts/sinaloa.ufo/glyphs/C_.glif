@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<glyph name="C" format="2">
-  <advance width="500"/>
-  <unicode hex="0043"/>
-  <image fileName="C_.png" xScale="0.9609840476648087" yScale="0.9609840476648087" xOffset="-116.33192389006342" yOffset="-122.69363828560445"/>
-  <outline>
-  </outline>
-</glyph>
