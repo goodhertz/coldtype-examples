@@ -6,7 +6,7 @@ df = "~/Type/fonts/fonts/_wdths/DigestiveVariable.ttf"
 t = Timeline(180, storyboard=[0])
 
 def style_a(f, hit):
-    dps:DATPenSet = StyledString("Gobinder Jhitta", Style(df, 300+30*(1-hit), wdth=0, ro=1, t=-10*(1-hit))).pens().align(f.a.r)
+    dps:DATPenSet = StyledString("Digestive", Style(df, 300+30*(1-hit), wdth=0, ro=1, t=-10*(1-hit))).pens().align(f.a.r)
     def alter(idx, p):
         fr = p.getFrame()
         rng = 10+45*hit

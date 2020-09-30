@@ -112,5 +112,5 @@ def render(f):
     # channel separate them in after effects later
     return [
         ghz_logo.f(1, 0, 0).skew(cowbell.ease()*1),
-        pens.f(0, 1, 1).reversePens().understroke(s=(0, 0, 1), sw=15).translate(0, 100)
+        pens.f(0, 1, 0).reversePens().understroke(s=(0, 0, 1), sw=15).translate(0, 100)
     ]
