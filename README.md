@@ -3,12 +3,11 @@
 ## Prerequisites
 
 - Python 3.8 (or 3.7) — installable from https://www.python.org/
-- The Coldtype app — installable from https://coldtype.goodhertz.co
 
 ## Setting up coldtype-examples
 
 ```
-git clone https://github.com/goodhertz/coldtype.git
+git clone https://github.com/goodhertz/coldtype.git (if you don’t already have this)
 git clone https://github.com/goodhertz/coldtype-examples.git
 cd coldtype-examples
 python3.8 -m venv venv --prompt=coldtype-examples
@@ -38,7 +37,7 @@ coldtype animations/808.py
 
 When you run that command, the process will "hang," meaning you’ll have to hit `ctrl+c` in order to kill the process, or hit `cmd+Q` with the viewing window in the foreground.
 
-While it’s hanging, you can type in little mnemonics to trigger different actions in the coldtype renderer.
+While it’s hanging, you can type in little mnemonics in the terminal window (not the viewer) to trigger different actions in the coldtype renderer.
 
 For instance, with the above process still running, try typing—
 
@@ -60,4 +59,4 @@ If you hit `ra`, this will **r**ender **a**ll, and should take a little while to
 ra
 ```
 
-Once you do a `ra` command, you can import those frames into any NLE in order to see the actual animation in realtime.
+Once you do a `ra` command, you can import those frames into any NLE in order to see the actual animation in realtime, or simply jump to the viewer app and hit the space bar.
