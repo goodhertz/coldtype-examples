@@ -1,8 +1,10 @@
 from coldtype import *
-from defcon import Font
 import noise
 
+# available from https://ohnotype.co/fonts/digestive
+# though other variable-wdth faces can be substituted
 df = "~/Type/fonts/fonts/_wdths/DigestiveVariable.ttf"
+
 t = Timeline(180, storyboard=[0])
 
 def style_a(f, hit):
@@ -12,7 +14,6 @@ def style_a(f, hit):
         rng = 10+45*hit
         factor = 0.05
         x_seed = (f.i+idx)*factor
-        #print(t.duration*factor)
         fs = (200-rng)+noise.pnoise1(x_seed, repeat=int(t.duration*factor))*rng
         if p.glyphName != "space":
             return StyledString(p.glyphName, Style(df, fs, wdth=1, ro=1)).fit(fr.w).pens().align(fr)[0]
@@ -22,9 +23,7 @@ def style_a(f, hit):
 
 @animation(rect=(1200,300), timeline=t)
 def render(f):
-    a:Animation = f.a
-    dps = style_a(f, 1)
-
     return DATPenSet([
-        dps.f("#ec6e87")
+        DATPen().rect(f.a.r).f(0),
+        style_a(f, 1).f(1)
     ])
