@@ -59,4 +59,4 @@ If you hit `ra`, this will **r**ender **a**ll, and should take a little while to
 ra
 ```
 
-Once you do a `ra` command, you can import those frames into any NLE in order to see the actual animation in realtime, or simply jump to the viewer app and hit the space bar.
+Once you do a `ra` command, jump to the viewer app and hit the space bar to preview the animation in real time at the correct frame rate.
